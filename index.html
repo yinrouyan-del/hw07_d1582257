@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="逢甲大學行銷系作業 - 台中舊火車站歷史建築與文化景觀報導">
+    <meta name="author" content="顏尹柔 D1582257">
+    <title>走讀台中舊火車站：鐵道歷史與新意象 | HW07</title>
+
+    <!-- 
+      【HW07 相對路徑載入 CSS 重點說明】
+      起點：本 HTML 檔案所在位置（根目錄）
+      路徑走向：進入同層的 css 子資料夾，讀取 hw07.css 檔案
+      href="css/hw07.css"
+      rel="stylesheet" 代表此外部檔案為樣式表
+    -->
+    <link rel="stylesheet" href="css/hw07.css">
+</head>
+<body>
+
+    <!-- 頁首與頁內導覽 -->
+    <header id="top">
+        <h1>走讀台中舊火車站：百年鐵道與文創新聚落</h1>
+        <p class="subtitle">報導撰寫：顏尹柔（學號：D1582257）｜ 行銷二甲 網頁程式設計作業 HW07</p>
+        <nav aria-label="網頁主要章節導覽">
+            <ul>
+                <li><a href="#intro">歷史沿革</a></li>
+                <li><a href="#architecture">建築特色</a></li>
+                <li><a href="#visitor-info">參觀資訊</a></li>
+                <li><a href="#media-section">影音導覽</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主要內容區 (main 唯一) -->
+    <main>
+        <article>
+            <!-- 第一章節：歷史沿革 -->
+            <section id="intro">
+                <h2>歷史脈絡：穿梭百年的城市起點</h2>
+                <p>
+                    臺中驛（臺中舊火車站）於 1905 年設站、1917 年現存樣式完工，是臺灣近代鐵路運輸與市街發展的核心樞紐。
+                    <!-- 
+                      【HW07 遷移處 1】：
+                      原本 HW06 為 <mark style="...">，
+                      此處移除 style 屬性，改用 class="reading-focus"，
+                      外觀交由 css/hw07.css 定義。
+                    -->
+                    <mark class="reading-focus">閱讀焦點：2016 年新站啟用後，舊站體完整保留並規劃為臺中驛鐵道文化園區。</mark>
+                </p>
+                <p>漫步在舊站月台與鐵軌區，既能看見退役的柴電機車頭與客車，也能感受歷史沉積與現代文創的融合。</p>
+            </section>
+
+            <!-- 第二章節：建築特色與影像 -->
+            <section id="architecture">
+                <h2>建築美學：辰野式磚造與尖塔</h2>
+                <p>建築外觀採用紅磚搭配白色仿石飾帶，中央設置宏偉的鐘樓尖塔與老虎窗，為日治時期公共建築之代表範例。</p>
+                
+                <figure>
+                    <img src="222.jpeg" alt="台中舊火車站宏偉紅磚鐘樓與入口車寄" class="feature-img">
+                    <figcaption>圖一：台中舊火車站鐘樓外觀與車寄細部（攝影／來源記錄）</figcaption>
+                </figure>
+
+                <!-- 
+                  【HW07 遷移處 2】：
+                  原本 HW06 為 <p style="border-left: 4px solid ...; padding: ...;">，
+                  改用 class="route-note"，將邊框與內距宣告完全獨立至外部 CSS。
+                -->
+                <p class="route-note">
+                    <strong>散步動線建議：</strong>建議自站前廣場進入，先欣賞中央門廳挑高桁架，再前往第一月台近距離接觸軌道與退役車廂。
+                </p>
+            </section>
+
+            <!-- 第三章節：資訊表格（三欄三筆資料） -->
+            <section id="visitor-info">
+                <h2>園區導覽與參觀指引</h2>
+                <p>整理舊站主要保留區域之重點與開放概況：</p>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">展區 / 空間</th>
+                                <th scope="col">核心看點</th>
+                                <th scope="col">參觀建議</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>舊站大廳與車寄</td>
+                                <td>百年木造屋架、紅白相間拱圈門廊</td>
+                                <td>全日開放外部參觀，大廳依展覽營運</td>
+                            </tr>
+                            <tr>
+                                <td>第一月台與舊軌道</td>
+                                <td>鑄鐵雕花遮雨柱、歷史鋼軌</td>
+                                <td>適合拍攝文青視角與鐵道全景</td>
+                            </tr>
+                            <tr>
+                                <td>退役實體列車展區</td>
+                                <td>DR2700 光華號、EMU100 自強號</td>
+                                <td>部分特定日期開放車廂內部靜態展示</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 
+                  【HW07 遷移處 3】：
+                  原本 HW06 為 <small style="font-style: italic; ...">，
+                  改用 class="report-disclaimer"，利用類別選擇器覆蓋一般 small 規則。
+                -->
+                <small class="report-disclaimer">
+                    資料整理聲明：本報導現場營運規範與展覽時間依「臺中驛鐵道文化園區」官方即時公告為準。
+                </small>
+            </section>
+
+            <!-- 第四章節：嵌入媒體（影片與地圖） -->
+            <section id="media-section">
+                <h2>影音與地理位置</h2>
+                <h3>實境導覽短片</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Zni6mDPKE0k?si=l7GxKgPEy932SH-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <h3>地圖定位</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.8989508587123!2d120.68266497593674!3d24.136652473041926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d09a56667db%3A0xe54e60bc2100e47!2z6Ie65Lit6Kit!5e0!3m2!1szh-TW!2stw!4v1715000000000!5m2!1szh-TW!2stw" title="台中火車站 Google 地圖" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </section>
+        </article>
+
+        <!-- 側邊欄：相關連結與延伸 -->
+        <aside>
+            <h3>延伸探索與外部資源</h3>
+            <ul>
+                <li><a href="https://www.tcrp.com.tw/" target="_blank" rel="noopener noreferrer">臺中驛鐵道文化園區官方網站</a></li>
+                <li><a href="https://nchdb.boch.gov.tw/" target="_blank" rel="noopener noreferrer">文化部文化資產局：國定古蹟臺中驛</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p><a href="#top" class="back-to-top">↑ 回到頁首</a></p>
+        <p>&copy; 2026 顏尹柔（D1582257） 逢甲大學行銷學系 網頁程式設計作業 HW07 版權所有</p>
+    </footer>
+
+</body>
+</html>
